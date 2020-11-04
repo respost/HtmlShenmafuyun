@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../common/css/title.css" />
+<link rel="stylesheet" type="text/css" href="../thirdParty/layer/theme/default/layer.css">
+<link rel="stylesheet" type="text/css" href="../thirdParty/iconfont/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="../thirdParty/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="../thirdParty/css/H-ui.admin.css" />
+<title>角色管理</title>
+</head>
+<body>
+<div id="saper-container">
+            <div class="subfiled clearfix" >
+                <h2><span>角色列表</span></h2>
+            </div>
+<!--插入内容 start-->
+<div class="page-container">
+	<div class="cl pd-5 bg-1 bk-gray"> <span class="l"> <a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" href="javascript:;" onclick="admin_role_add('添加角色','role_add.html','800','600')"><i class="Hui-iconfont">&#xe600;</i> 添加角色</a> </span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
+	<table class="table table-border table-bordered table-hover table-bg">
+		<thead>
+			<tr>
+				<th scope="col" colspan="6">角色管理</th>
+			</tr>
+			<tr class="text-c">
+				<th width="25"><input type="checkbox" value="" name=""></th>
+				<th width="40">ID</th>
+				<th width="200">角色名</th>
+				<th>用户列表</th>
+				<th width="300">描述</th>
+				<th width="70">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="text-c">
+				<td><input type="checkbox" value="" name=""></td>
+				<td>1</td>
+				<td>超级管理员</td>
+				<td><a href="#">admin</a></td>
+				<td>拥有至高无上的权利</td>
+				<td class="f-14"><a title="编辑" href="javascript:;" onclick="admin_role_edit('角色编辑','role_add.html','1','800','600')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a> <a title="删除" href="javascript:;" onclick="admin_role_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+			</tr>
+			<tr class="text-c">
+				<td><input type="checkbox" value="" name=""></td>
+				<td>2</td>
+				<td>主管</td>
+				<td><a href="#">管家</a></td>
+				<td>具有添加、审核、发布、删除内容的权限</td>
+				<td class="f-14"><a title="编辑" href="javascript:;" onclick="admin_role_edit('角色编辑','role_add.html','2','800','600')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a> <a title="删除" href="javascript:;" onclick="admin_role_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../thirdParty/js/jquery.dataTables.min.js"></script><!--包含“从当前数据中检索：”内容-->
+<script type="text/javascript" src="../thirdParty/layer/layer.js"></script>
+<script type="text/javascript">
+/*管理员-角色-添加*/
+function admin_role_add(title,url,w,h){
+			layer.open({
+			  type: 2,
+			  title:title,
+			  area: [w+'px', h+'px'],
+			  fixed: false, //不固定
+			  maxmin: true,
+			  content: url
+			});
+}
+/*管理员-角色-编辑*/
+function admin_role_edit(title,url,id,w,h){
+			layer.open({
+			  type: 2,
+			  title:title,
+			  area: [w+'px', h+'px'],
+			  fixed: false, //不固定
+			  maxmin: true,
+			  content: url
+			});
+}
+/*管理员-角色-删除*/
+function admin_role_del(obj,id){
+	layer.confirm('角色删除须谨慎，确认要删除吗？',function(index){
+		$.ajax({
+			type: 'POST',
+			url: '',
+			dataType: 'json',
+			success: function(data){
+				$(obj).parents("tr").remove();
+				layer.msg('已删除!',{icon:1,time:1000});
+			},
+			error:function(data) {
+				console.log(data.msg);
+			},
+		});		
+	});
+}
+</script>
+<!--插入内容 end--> 
+</div>  
+</body>
+</html>

@@ -1,0 +1,473 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>源码详情页 - 神码服云</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/top.css">
+<link rel="stylesheet" type="text/css" href="css/code.css">
+<link rel="stylesheet" type="text/css" href="css/foot.css">
+<link rel="stylesheet" type="text/css" href="css/service.css">
+<link rel="stylesheet" type="text/css" id="skin"  href="">
+<link rel="stylesheet" type="text/css" href="layer/theme/default/layer.css">
+<link rel="stylesheet" type="text/css" href="ment/css/comment.css" />
+<link rel="stylesheet" type="text/css" href="ment/css/sinaFaceAndEffec.css" />
+
+</head>
+<body>
+<!--top-->
+<div id="top">
+	<div id="topbox">
+		<div class="top_left">
+			<ul>
+			<li onclick="SetHome(this,'http://www.smfy123.com');">设为首页</li>
+			<li onclick="AddFavorite('神码服云',location.href)">收藏本站</li>
+			</ul>
+		</div>
+		<div class="top_right">
+		<ul>
+        <li class="changeSkin" title="点击更换皮肤">换肤</li>
+         <li><a href="#">留言板</a></li>
+		<li><a href="#">我的收藏</a></li> 
+        </ul>         	 			
+		</div>
+    </div>
+</div>
+<div id="myskin">
+	<div id="skinbox">
+        <ul>
+            <li>
+                <img src="skin/images/ico1.jpg"/>
+                <p>哆啦A梦</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico2.jpg"/>
+                <p>杨幂</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico3.jpg"/>
+                <p>王者荣耀</p>
+                <span></span>
+            </li>
+            <li style="margin-right:0px;">
+                <img src="skin/images/ico4.jpg"/>
+                <p>夏日海滩</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico5.jpg"/>
+                <p>春意盎然</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico6.jpg"/>
+                <p>赵丽颖</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico7.jpg"/>
+                <p>Angelababy</p>
+                <span></span>
+            </li>
+             <li style="margin-right:0px;">
+                <img src="skin/images/ico8.jpg"/>
+                <p>清凉一夏</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico9.jpg"/>
+                <p>Hello Kitty</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico10.jpg"/>
+                <p>萌女神</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico11.jpg"/>
+                <p>可爱阿狸</p>
+                <span></span>
+            </li>
+             <li style="margin-right:0px;">
+                <img src="skin/images/ico12.jpg"/>
+                <p>初音未来</p>
+                <span></span>
+            </li>
+        </ul>
+        <div>
+        	<dl>
+        	<dt><img id="previewPic" src="images/skinStyle.png"/></dt>
+            <dd>背景皮肤预览效果</dd>
+            <dd><input id="skin_save" type="button" value="保存"/><input id="skin_close" type="button" value="关闭"/></dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div id="allPage">
+<!--header-->
+<div id="header">
+	<div id="logo"><a href="index.html"><img src="images/logo.png"/></a></div>
+    <div id="search">
+    <div class="search_txet"> <input type="text" value=""  placeholder="搜索资源…"/></div>
+    <div class="search_btn">搜索</div>
+    </div>
+ 	<div id="tag">
+    	<dl class="beat">
+    		<dt><a href="reg.html"><img src="images/join.png"/> </a></dt>
+    		<dd>加入会员</dd>
+    	</dl>
+    	<dl class="beat">
+    		<dt><a href="#"><img src="images/email.png"/> </a></dt>
+    		<dd>联系我们</dd>
+   		</dl>
+    	<dl class="beat">
+    		<dt><a href="#"><img src="images/error.png"/> </a></dt>
+   			 <dd>失效通知</dd>
+    	</dl>
+   		<dl class="beat">
+   	 		<dt><a href="#"><img src="images/idc.png"/> </a></dt>
+    		<dd>神码数据</dd>
+    	</dl>
+    	<dl>
+            <dt class="headPic"><a href="#"><img id="headPic" src="images/member.jpg" /> </a></dt>
+     		<dd class="headFont"><span id="nick">我叫好帅</span><img id="drop-down" src="images/drop-down.gif"></dd>
+    	</dl>
+         <div id="userNav"> 
+					<a  href="javascript:void(0)" onClick="openUserBox(0)"><span class="lnIco Ico_user"></span>会员中心</a>
+					<a  href="javascript:void(0)" onClick="openUserBox(1)"><span class="lnIco Ico_recharge"></span>账户充值</a>
+					<a  href=""><span class="lnIco Ico_msg"></span>消息(<span id="newMsg">0</span>)</a>
+                    <a  href="javascript:void(0)" onClick="loginOut()"><span class="lnIco Ico_exit"></span>退出</a>
+			</div>
+    </div>
+    <div id="nav">
+        <ul>
+        <li class="current"><a href="index.html">网站首页</a></li>
+        <li><a href="#">精品源码</a></li>
+        <li><a href="#">会员专享</a></li>
+        <li><a href="#">站长工具</a></li>
+        <li><a href="#">软件下载</a></li>
+        <li><a href="#">技术文档</a></li>
+        <li><a href="#">行业资讯</a></li>
+        <li><a href="#">聊天频道</a></li>
+        <li style=" margin-right:0px;"><a href="#">手机客户端</a></li>
+        </ul>
+    </div>
+</div>
+<!-- box-->
+<div id="box">
+	<div id="box_left">
+		<div class="codeInfo_top">
+              <div class="codeInfo_ico"><a href="#"><img src="codeList/images/ico/jsp.png" title="JSP源码"/></a></div>
+              <div class="codeInfo_title">
+                    <h1>苹果cms仿腾讯模板+仿爱奇艺手机模板源码+WAP手机版-源码100%完整</h1>
+                    <ul>
+                         <li class="releaseDate">发布于：2017-7-27 09:12</li>                      
+                         <li><a href="#" ><img class="browse_icon" src="images/browse.png"/><span id="browse">18</span> 围观</a></li>
+                         <li><a href="#" ><img class="comment_icon" src="images/comment.png"/><span id="comment">0</span> 评论</a></li>		
+                   </ul>
+              </div>
+              <hr class="style-two"/>
+        </div>
+        <div style="clear:both"></div>
+        <div class="codeInfo_abs"><span>摘要：</span> 文 | 于欣烈 昨天的 Model 3 交付仪式后，越来越多的人把特斯拉比作苹果，并认为 Model 3 堪比苹果标志性产物 iPhone 4。 从昨天的交付仪式来看，至少有一点，特斯拉与苹果有明显的不同——公布会。 特斯拉的发布会 ...</div>
+       	<div><img src="images/split_line.png"/></div>
+        <div class="codeInfo_iframe">
+        <iframe src="codeList/20171113/01.html" id="myIframe" width="100%" onload="changeFrameHeight()"  scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div style="margin:-20px 0px 0px 0px;"><img src="images/split_line.png"/></div>          
+        <!--下载区 start-->
+        <h3>下载地址：</h3>
+        <div class="codeInfo_down">     	
+            <ul id="tasks" class="item-list">
+                <li class="item-orange clearfix">
+                    <label>隐藏附件：</label>******** 在线购买，无需人工干预，购买后系统会自动将本附件资源发送到您邮箱请注意查收！			
+                </li>
+                <li class="item-red clearfix">
+                    <label>资源价格：</label><span class="price">￥120</span>                
+                </li>
+                <li class="item-blue clearfix">
+                    <label>会员五折：</label><span class="price">￥60</span>   
+                </li>
+                <li class="item-grey green clearfix">
+                   商业会员可享受五折购买特权，普通会员无折扣，您目前尚未升级会员！  >>> <span class="orange">升级会员</span>
+                </li>
+                <li class="item-green green clearfix">
+                  普通会员购买，需支付：<span class="price">￥120</span>  >>> <span class="orange">立即购买</span>
+                </li>
+                <li class="item-pink clearfix">
+                  本资源为虚拟可复制性商品，购买后不予退款，谢谢您的支持！
+                </li>	
+            </ul>
+        </div>
+        <!--下载区end-->
+         <div  style="clear:both"></div>
+        <!--评论区 start-->
+        	<div class="comment_box">
+                <div class="info clearfix">
+                <ul>
+                 <li class="time">发布日期：2017-11-11 01:23:00</li>               
+                 <li>
+                <div class="bdsharebuttonbox">
+                    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+                    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                </div>
+                 </li>
+                <li style="float:right;"><a class="praise" id="praise" href="javascript:;">赞</a></li>
+                </ul>                                                  
+                </div>
+   				<div style="clear:both"></div>
+                <div class="praises-total" id="praises-total" total="5">5个人觉得很赞</div>
+				<div class="cont-box">
+					<textarea class="text" placeholder="请输入..."></textarea>
+				</div>
+				<div class="tools-box">
+					<div class="operator-box-btn"><span class="face-icon"  >☺</span></div>
+                    <div class="yzm">
+                    <dl><dt>验证码：</dt><dd><input type="text" name="code" id="code"  maxlength="5"  value="" /></dd><dd><img  src="images/code.gif"/></dd></dl>
+                   </div>
+  
+					<div class="submit-btn"><input type="button" onClick="out()"value="提交评论" /></div>
+				</div>
+			</div>
+            <div id="info-show">
+            	 <ul>                                        
+				 </ul>                 
+			</div>  
+        <!--评论区 end -->
+
+    </div><!--left结束-->
+	<div id="box_right">
+    	<div id="author">
+        <h1><img src="images/head/ay.jpg" /></h1>
+        <p>安阳 ♪<span class="sign">作者</span></p>
+        <hr class="style-one"/>
+ 			<ul>
+            <li><a href="#" target="_blank">94</a><p>积分</p></li>
+            <li><a href="#" target="_blank">5</a><p>源码</p></li>
+            <li><a href="#" target="_blank">0</a><p>评论</p></li>
+			</ul>
+        </div>
+        <div id="codeType">
+        <h4>源码分类</h4>
+        <ul>       
+        <li><a href="#">JSP源码</a></li>
+        <li><a href="#">PHP源码</a></li>
+        <li><a href="#">ASP源码</a></li>
+        <li><a href="#">HTML5源码</a></li>
+        <li><a href="#">andriod</a></li>
+        <li><a href="#">ISO</a></li>
+        </ul>
+        </div>
+        <div id="Interest">
+        <h4>您可能感兴趣的源码<img src="images/header_hot.png"/></h4>
+        <ul>       
+        <li><a href="#">熊猫CP2.0带wap手机测试熊猫CP2.0带wap手机测试熊猫CP2.0带wap手机测试熊猫CP2.0带wap手机测试</a></li>
+        <li><a href="#">2017流量战舰程序</a></li>
+        <li><a href="#">微商专用授权代</a></li>
+        <li><a href="#">江湖CMS</a></li>
+        <li><a href="#">2017微信抓娃娃独立版</a></li>
+        <li><a href="#">本地生活门户V8.1</a></li>
+        <li><a href="#">ThinkPHP开发的微盘交易系统</a></li>
+        <li><a href="#">DEDECMS网络科技公司全屏整站</a></li>
+        <li><a href="#">仿犀牛地方门户V2.2旗舰商</a></li>
+        <li><a href="#">美术画室画廊网站源码</a></li>
+        <li><a href="#">HTML5自动响应式企业门户站源码</a></li>
+        <li><a href="#">精品家庭装修材料网</a></li>
+        <li><a href="#">传奇家族战歌平台源码</a></li>
+        <li><a href="#">HTML5自适应公司门户站</a></li>
+        <li><a href="#">1000种小游戏源代码</a></li>
+        <li><a href="#">手机商城源码</a></li>
+        <li><a href="#">高仿开山网供货平台系统</a></li>
+        <li><a href="#">个人主页网站源码</a></li>
+        <li><a href="#">王者荣耀竞技平台</a></li>
+        <li><a href="#">直播视讯平台源码</a></li>
+        <li><a href="#">御剑江湖网页游戏源码</a></li>
+        <li><a href="#">全讯网源码</a></li>
+        </ul>
+        </div>
+	</div><!--right结束-->
+</div>
+<!--footer-->
+<div style="clear:both"></div>
+<div id="footer">
+	<div id="link">
+    	<h1>友情链接</h1>
+        <ul>
+        <li><a href="#"><img src="images/baidu.gif"/></a></li>
+        <li><a href="#"><img src="images/360so.gif"/></a></li>
+        <li><a href="#"><img src="images/sogou.gif"/></a></li>
+         <li><a href="#"><img src="images/weixin.jpg"/></a></li>
+        <li><a href="#"><img src="images/alipay.gif"/></a></li>
+        <li><a href="#"><img src="images/admin5.gif"/></a></li>
+        <li><a href="#"><img src="images/tenpay.gif"/></a></li>
+        <li><a href="#"><img src="images/upyun.jpg"/></a></li>
+        <li><a href="#"><img src="images/zzidc.jpg"/></a></li>
+        <li  style="padding-right:0px;"><a href="#"><img src="images/aliyun.jpg"/></a></li>
+        </ul>
+    </div>
+	<div id="footup"></div>
+	
+    <div id="footdown">
+   		 <div id="footbox">
+    		<div class="footdown_left">
+    			<div>
+                <ul>
+    			<li><a href=""#>关于我们</a></li>
+    			<li><a href=""#>联系我们</a></li>
+    			<li><a href=""#>广告合作</a></li>
+    			<li><a href=""#>隐私条款</a></li>
+    			<li><a href=""#>免责声明</a></li>
+    			<li><a href=""#>网站地图 </a></li>
+    			<li style="padding-right:0px"><a href=""#>&copy; 2008-2017 神码服云 版权所有</a></li> 
+    			</ul>
+                </div>
+                <p>工信备：桂ICP备17012557号-1 公安备：桂公网安备 42280102000242号</p>
+    		</div>
+    		<div class="footdown_right">
+                <div>
+                <ul>
+    			<li><a href=""#><img src="images/rz1.png"/></a></li>
+    			<li><a href=""#><img src="images/rz2.png"/></a></li>
+                <li><a href=""#><img src="images/rz3.png"/></a></li>
+                <li><a href=""#><img src="images/rz4.png"/></a></li>
+                <li><a href=""#><img src="images/rz5.png"/></a></li>
+    			</ul>
+                </div>
+            </div>
+         </div>
+         <div class="footlogo"><a href="#"><img src="images/footlogo.png"/></a></div>
+    </div>
+	<div id="fixed_left"></div>
+    <div id="backtop" class="backtopClass">
+		<a title="返回顶部"><img src="images/scrolltop_2.png" ></a>
+	</div>
+    <!-- 客服代码 begin -->
+    <audio id="bgMusic" src="images/service/music.mp3" autoplay="autoplay" loop></audio>
+    <div id="service">
+        <div id="open_im" class="open-im">&nbsp;</div>  
+        <div class="im_main" id="im_main">
+            <div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>
+            <a href="tencent://message/?uin=3196887191&amp;Menu=yes" target="_blank" class="im-qq qq-a" title="在线QQ客服">
+                <div class="qq-container"></div>
+                <div class="qq-hover-c"><img class="img-qq" src="images/service/qq.png"></div>
+                <span> QQ在线咨询</span>
+            </a>
+            <div class="im-tel">
+                <p>售前咨询热线</p>
+                <p class="tel-num">400-123-45678</p>
+                <p>售后咨询热线</p>
+                <p class="tel-num">010-12345678</p>
+            </div>
+            <div class="im-footer" style="position:relative">
+                <div class="weixing-container">
+                    <div class="weixing-show">
+                        <div class="weixing-txt">
+                        <p>微信扫一扫</P>
+                        <p>关注神码服云</p>
+                        </div>
+                        <img class="weixing-ma" src="images/service/weixing.jpg">
+                        <div class="weixing-sanjiao"></div>
+                        <div class="weixing-sanjiao-big"></div>
+                    </div>
+                </div>
+                <!--<div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>-->
+                <div class="go-top"><a id="audioBtn" title="开关音效"></a></div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+    </div>
+	<!-- 客服代码 end-->
+</div>
+</div>
+<!--JavaScript jQuery start-->
+<script type="text/javascript" src="jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/top.js"></script>
+<script type="text/javascript" src="js/foot.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+<script type="text/javascript" src="ment/js/comment.js"></script>
+<script type="text/javascript" src="ment/js/sinaFaceAndEffec.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="jquery/jquery-ui-1.10.3.custom.min.js"></script> 
+<script type="text/javascript">
+		$(function(){
+			//感兴趣的：循环垂直向上滚动
+			function movedome(){
+				var margintop=0;//上边距的偏移量
+				var stop=false;
+				setInterval(function(){
+				if(stop==true){
+					return;
+				}
+				$("#Interest").find("li").first().animate({"margin-top":margintop--},0,function(){
+					var $li=$(this);
+					if(!$li.is(":animated")){//第一个li的动画结束时
+						if(-margintop>$li.height()){
+							$li.css("margin-top","0px").appendTo($("#Interest ul"));
+							margintop=0;
+						}
+					}
+				});
+			},50);
+				//鼠标放感兴趣的(ul)上时
+			$("#Interest ul").hover(function(){
+				$(this).css("cursor","pointer");
+					stop=true;//停止动画
+				},function(){
+					stop=false;//开始动画
+				});
+			}	
+			movedome();										
+		});
+	function changeFrameHeight(){
+		var ifm= document.getElementById("myIframe"); 
+		ifm.height=document.documentElement.clientHeight;
+	}
+	window.onresize=function(){  
+		 changeFrameHeight();  
+	} 
+	//可拖动表格		
+	$('#tasks').sortable({
+		opacity:0.8,
+		revert:true,
+		forceHelperSize:true,
+		placeholder: 'draggable-placeholder',
+		forcePlaceholderSize:true,
+		tolerance:'pointer',
+		stop: function( event, ui ) {
+			$(ui.item).css('z-index', 'auto');
+		}
+	}); 
+
+	// 绑定表情
+	$('.face-icon').SinaEmotion($('.text'));
+	// 测试本地解析
+	function out() {
+		var inputText = $('.text').val();
+		$('#info-show ul').append(reply(AnalyticEmotion(inputText)));
+	}	
+	var html;
+	function reply(content){
+		html  = '<li>';
+		html += '<div class="head-face">';
+		html += '<img src="ment/images/1.jpg" / >';
+		html += '</div>';
+		html += '<div class="reply-cont">';
+		html += '<p class="username">安阳：<span class="comment-body">'+content+'</span></p>';
+		html += '<p class="comment-footer">2014-02-19 14:36　</p>';
+		html += '</div>';
+		html += '</li>';
+		html += '<hr class="style-two"/>';
+		return html;
+	}
+/*百度分享代码*/
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script> 
+<!--JavaScript jQuery end-->
+</body>
+</html>

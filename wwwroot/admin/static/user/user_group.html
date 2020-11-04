@@ -1,0 +1,111 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" href="../../common/css/title.css" />
+
+  <!-- Stylesheets -->
+  <link href="../thirdParty/bootstrap/css/bootstrap.css" rel="stylesheet"> 
+    <!-- Font awesome icon -->
+  <link href="../thirdParty/bootstrap/css/font-awesome.css" rel="stylesheet"> 
+  <!-- Main stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+    <!--图标-->
+  <link rel="stylesheet" type="text/css" href="../thirdParty/iconfont/iconfont.css" />
+	<!--layer-->
+ <link rel="stylesheet" type="text/css" href="../thirdParty/layer/theme/default/layer.css">
+<title>会员分组</title>
+<style>
+.definewidth{
+	width:96%;
+	margin:auto;		
+}
+.m10{
+	margin-top:10px;
+}
+/*新图标样式*/
+.newIco{width:20px;height:20px;padding:0;}
+</style>
+</head>
+<body>
+<div id="saper-container">
+            <div class="allTitle" >
+                <h2>会员分组</h2>
+            </div>
+<!--插入内容 start-->
+<div class="definewidth m10" style="text-align:right;">
+<button type="button" class="btn btn-success" id="addnew">新增分组</button>
+</div>
+<table class="table table-bordered table-hover definewidth m10">
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>组名</th>
+		<th>折扣比例</th>
+        <th>管理操作</th>
+    </tr>
+    </thead>
+			<tr>
+                <td>1</td>
+                <td>普通会员</td>
+				<td>0.95</td>
+                <td> 
+                    <button onclick="updateGroup('1','普通会员','0.95')"  class="btn btn-xs btn-warning newIco"><i class="Hui-iconfont">&#xe6df;</i></button>
+                    <button class="btn btn-xs btn-danger newIco"><i class="Hui-iconfont">&#xe6e2;</i> </button>                        
+				</td>
+            </tr>
+			<tr>
+                <td>2</td>
+                <td>VIP1</td>
+				<td>0.9</td>
+                <td> 
+                    <button class="btn btn-xs btn-warning newIco"><i class="Hui-iconfont">&#xe6df;</i></button>
+                    <button class="btn btn-xs btn-danger newIco"><i class="Hui-iconfont">&#xe6e2;</i> </button>                        
+				</td>
+            </tr>
+			<tr>
+			 <td>3</td>
+               <td>VIP3</td>
+			   <td>0.8</td>
+                <td> 
+                    <button class="btn btn-xs btn-warning newIco"><i class="Hui-iconfont">&#xe6df;</i></button>
+                    <button class="btn btn-xs btn-danger newIco"><i class="Hui-iconfont">&#xe6e2;</i> </button>                        
+				</td>
+            </tr>
+</table>
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../thirdParty/layer/layer.js"></script>
+<script>
+    $(function () {       
+		$('#addnew').click(function(){
+			layer.open({
+			  type: 2,
+			  title:'添加分组',
+			  area: ['500px', '200px'],
+			  fixed: false, //不固定
+			  maxmin: true,
+			  content: 'group_add.html'
+			});
+		 });
+
+    });
+	    //修改
+    function updateGroup(id,name,disc){
+    	layer.open({
+			  type: 2,
+			  title:'修改分组',
+			  area: ['500px', '200px'],
+			  fixed: false, //不固定
+			  maxmin: true,
+			  content: 'group_add.html?id='+id
+			});
+    }
+</script>
+<!--插入内容 end--> 
+</div> 
+</body>
+</html>

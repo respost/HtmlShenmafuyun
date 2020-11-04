@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" href="../../common/css/title.css" />
+<link rel="stylesheet" type="text/css" href="../thirdParty/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="../thirdParty/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="../thirdParty/iconfont/iconfont.css" />
+<!--引入easyui框架-->
+<link rel="stylesheet" type="text/css" href="../thirdParty/easyui/themes/default/easyui.css">
+<title>源码添加与编辑</title>
+<style>
+.tt-inner{
+	display:inline-block;
+	line-height:12px;
+	padding-top:5px;
+}
+.tt-inner img{
+	border:0;
+}
+#tbBox{position:relative;}
+#tbBox dl{position:absolute;top:0px;left:635px;border:1px solid #CCC; width:230px; height:175px;overflow:hidden;}
+#tbBox dl dt{height:30px;line-height:30px;text-align:center;background:#E0ECFF;}
+#tbBox dl dd{padding:5px;}
+#tbBox dl dd img{ width:220px; height:135px;}
+input{text-indent:10px;}
+.w8{width:882px;}
+</style>
+</head>
+<body>
+<div id="saper-container">
+            <div id="addTitle" class="subfiled clearfix" >
+                <h2><span>添加源码</span></h2>
+            </div>
+<!--插入内容 start-->			
+<article class="page-container">
+	<form class="form form-horizontal"  action="#" method="post">
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>源码标题：</label>
+			<div class="formControls col-xs-8 col-sm-9 w8">
+				<input type="text" class="input-text" value="" placeholder="" id="articletitle" name="articletitle">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>源码类型：</label>
+			<div class="formControls col-xs-8 col-sm-9 w8"> <span class="select-box">
+				<select name="articletype" class="select">
+					<option value="0">请选择</option>
+					<option value="1">JSP源码</option>
+					<option value="2">PHP源码</option>
+					<option value="3">NET源码</option>
+					<option value="4">HTML5源码</option>
+					<option value="2">android</option>
+					<option value="2">ios</option>
+				</select>
+				</span> </div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">源码售价：</label>
+			<div class="formControls col-xs-8 col-sm-9 w8">
+				<input type="text" class="input-text" placeholder="" id="price" name="author">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">排序值：</label>
+			<div class="formControls col-xs-8 col-sm-9 w8">
+				<input type="text" class="input-text"  placeholder="" id="articlesort" name="articlesort">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">允许评论：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<label for="comment_y"><input type="radio" name="acs" id="comment_y" value="0" checked="true">是</label>&nbsp;&nbsp;&nbsp;&nbsp;
+				<label for="comment_n"><input type="radio" name="acs" id="comment_n" value="1">否</label>&nbsp;&nbsp;
+			</div>	
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">源码作者：</label>
+			<div class="formControls col-xs-8 col-sm-9 w8">
+				<input type="text" class="input-text" value="" placeholder="" id="author" name="author">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">源码来源：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<label for="src_0"><input type="radio" name="codeSrc" id="src_0" value="0" checked="true">原创</label>&nbsp;&nbsp;&nbsp;&nbsp;
+				<label for="src_1"><input type="radio" name="codeSrc" id="src_1" value="1">转载</label>&nbsp;&nbsp;&nbsp;&nbsp;
+				<label for="src_2"><input type="radio" name="codeSrc" id="src_2" value="2">二次开发</label>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">关键词：</label>
+			<div class="formControls col-xs-8 col-sm-9 w8">
+				<input type="text" class="input-text" value="" placeholder="" id="keywords" name="keywords">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">源码摘要：</label>
+			<div class="formControls col-xs-8 col-sm-9 w8">
+				<textarea name="abstract" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"></textarea>
+				<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+			</div>
+		</div>
+		<div class="row cl" >
+			<label class="form-label col-xs-4 col-sm-2">缩略图：</label>
+			<div class="formControls col-xs-8 col-sm-9" id="tbBox">
+				<div class="uploader-thum-container" >
+				<!--插入easyui框架内容 start-->				
+					<span class="btn-upload form-group">				
+					<a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont">&#xe642;</i> 选择图片</a>
+					<input type="file" multiple name="file-2" class="input-file">
+					</span> 
+				<!--插入easyui框架内容 end-->
+					<button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>
+				</div>
+					<dl>
+					<dt>缩略图预览效果</dt>
+					<dd><img src="images/tb.jpg" alt="缩略图" /></dd>
+					</dl>
+			</div>
+			
+			
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">附件：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<!--插入easyui框架内容 start-->
+				<div class="easyui-tabs" data-options="tabWidth:100,tabHeight:60" style="width:600px;height:130px" >
+					<div title="<span class='tt-inner'><img src='images/modem.png'/>&nbsp;本地文件</span>" style="padding:6px">				
+						<span class="btn-upload form-group"  style="margin-top:10px;" >
+						<input class="input-text upload-url" style="width:200px;" type="text" name="uploadfile" id="uploadfile" nullmsg="请添加附件！">
+						<a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
+						<input type="file" multiple name="file-2" class="input-file">
+						</span> 
+					</div>
+					<div title="<span class='tt-inner'><img src='images/scanner.png'/>&nbsp;网络文件</span>" style="padding:6px">
+						<span class="btn-upload form-group"  style="margin-top:10px;line-height:30px;" >
+						网盘地址：<input class="input-text upload-url" style="width:245px;" value="http://" type="text" name="uploadfile" id="uploadfile" >&nbsp;&nbsp;
+						提取密码：<input class="input-text upload-url" style="width:50px;" type="text" name="uploadfile" id="uploadfile" ">
+						</span> 
+					</div>
+
+				</div>
+			<!--插入easyui框架内容 end-->
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">解压密码：</label>
+			<div class="formControls col-xs-8 col-sm-9 w8">
+				<input type="text" class="input-text" value="" placeholder="" id="decomPwd" name="keywords">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">源码内容：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+				<div class="kv-item-content">
+						<textarea  id="content" name="content" style="width:850px;height:400px;visibility:hidden;"></textarea>
+                    </div>
+			</div>
+		</div>
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+				<button onClick="code_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
+				<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
+			</div>
+		</div>
+	</form>
+</article>
+<!--插入内容 end--> 
+<!--引入富文本编辑器-->
+<script type="text/javascript" src="../thirdParty/editor/kindeditor.js"></script>
+<!--引入easyui框架-->
+<script type="text/javascript" src="../thirdParty/easyui/jquery.min.js"></script>
+<script type="text/javascript" src="../thirdParty/easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript">
+	function code_submit(){
+		var acs=$("[name=acs]:checked").val();
+    	alert(acs);
+     }
+     
+	//富文本编辑器
+    KE.show({
+        id : 'content',	          //<textarea>的id
+		cssPath : './index.css'   //这个是css的保存位置
+    });
+    $(function(){
+	   var uid = getQueryString('sname');
+	   if(uid!=null&&uid=='add'){//添加
+			$("#addTitle").show();
+	   }else{
+			$("#addTitle").hide();
+	   }
+				
+	//获取当前系统时间
+	alert(getNowTime());	   
+	});
+	
+function getNowTime(){
+	var nowTime=new Date();
+	nowTime=new Date().format("yyyy-MM-dd hh:mm:ss");
+	return nowTime;
+		
+	
+}
+Date.prototype.format = function(fmt) { 
+     var o = { 
+        "M+" : this.getMonth()+1,                 //月份 
+        "d+" : this.getDate(),                    //日 
+        "h+" : this.getHours(),                   //小时 
+        "m+" : this.getMinutes(),                 //分 
+        "s+" : this.getSeconds(),                 //秒 
+        "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+        "S"  : this.getMilliseconds()             //毫秒 
+    }; 
+    if(/(y+)/.test(fmt)) {
+            fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+    }
+     for(var k in o) {
+        if(new RegExp("("+ k +")").test(fmt)){
+             fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+         }
+     }
+    return fmt; 
+}
+	//正则分析方式一
+	function queryString(key){
+		var regex_str = "^.+\\?.*?\\b"+ key +"=(.*?)(?:(?=&)|$|#)"
+		var regex = new RegExp(regex_str,"i");
+		var url = window.location.toString();
+		if(regex.test(url)){
+			return RegExp.$1;
+		}else{
+			return undefined;
+		}		
+	}
+	//正则分析方式二
+	function getQueryString(name) {
+		var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null) {
+			return unescape(r[2]);
+		}else{
+		return null;
+		}
+	}		
+</script>
+</body>
+</html>

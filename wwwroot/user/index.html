@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>会员中心</title>
+<link rel="stylesheet"  href="css/tab.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<link rel="stylesheet" type="text/css" href="css/bgbox.css"/>
+<link rel="stylesheet" type="text/css" href="../layer/theme/default/layer.css">
+</head>
+<body>
+        <div id="tab" style="margin:0 auto;">
+            <div class="tabContainer">
+                <ul class="tabHead">
+                    <li class="currentBtn"><a href="javascript:;">我的资料</a></li>
+                    <li><a href="javascript:;">账户充值</a></li>
+                    <li><a href="javascript:;">升级会员</a></li>
+                    <li><a href="javascript:;">修改密码</a></li>
+					<li><a href="javascript:;">已购资源</a></li>
+					<li><a href="javascript:;">佣金提现</a></li>
+                    <li><a href="javascript:;">浏览记录</a></li>
+                </ul>
+            </div>
+            <div class="tabBody">
+                <ul>
+               	    <!--基本资料-->
+                    <li class="tabCot">                           
+					<div id="infoBox">
+						<div id="homeIco"></div>
+						<div id="userInfo">
+                        	<h5>
+                            <img class="headPic"  src="../images/head/ay.jpg" />
+                            <span class="userNick">
+                            <span id="userNick">安阳 ♪</span>
+                            <img class="vipIco" src="../images/vip/vip8.png" />
+                            </span>
+                            <a class="upvip" href="javascript:void(0)" onclick="changeTab(2)">升级为会员</a>
+                            </h5> 
+							<p class="userName">用户名：<span  id="userName">qq1234</span></p>
+							<p class="userMoney">余　额：<span id="userMoney">500.00</span>&nbsp;<span class="moneyText">人民币(RMB)</span>&nbsp;
+                            <span class="availText">佣金：</span><span id="userAvail">100.00</span><span class="moneyText">(可提现)</span>
+                             <a class="tikuan" href="javascript:void(0)" onclick="changeTab(5)">申请提现</a>
+                            </p>							
+						</div>
+                        <div style="clear:both"></div>
+                        <div class="infoLeft">
+                       		<p>真实姓名：不告诉你</p>
+       						<p>会员积分：30</P>
+                            <p>收款银行：中国工商银行</P>
+                            <p>银行卡号：6217996110045465567</P>
+                            <p>支行地址：深圳罗湖支行</P>
+                            
+                        </div>
+                        <div class="inforight">
+                       		<p>手机号码：13800138000</P>
+                            <p>电子邮箱：3196887191@qq.com</P>
+                            <p>注册日期：2017-11-8 12:25:00</P>
+                            <p>最近登录：2017-11-11 00:05:16</P>
+                            <p>登录地址： 广西南宁</P>
+                        </div>
+					</div>
+                    
+                    </li>
+                     <!--账户充值-->
+                    <li class="tabCot">
+					<div id="payBox">
+                        <div style="width:94%; margin:0 auto; margin-top:10px;">
+                        <a href="javascript:void(0);" onclick="Go('wx_pay.php');">
+                            <span>
+                                <i class="wxpay"></i>
+                                <em><b>微信支付</b><br/>扫二维码充值，自动入账</em>
+                            </span>
+                            <span class="go_pay">去支付</span>
+                        </a>
+                        <a href="javascript:void(0);" onclick="Go('ali_pay.php');">
+                            <span>
+                                <i class="zfb"></i>
+                                <em><b>支付宝</b><br/>支付宝扫码，立即到账</em>
+                            </span>
+                            <span class="go_pay">去支付</span>
+                        </a>
+                        <a href="javascript:void(0);" onclick="Go('<?=$input_url?>');">
+                            <span>
+                                <i class="upay"></i>
+                                <em><b>网银充值</b><br/>在线支付，自动入账</em>
+                            </span>
+                            <span class="go_pay">去支付</span>
+                        </a>
+                        <a href="javascript:void(0);" onclick="Go('hk_money.php');">
+                            <span>
+                                <i class="atm"></i>
+                                <em><b>银行转账</b><br/>人工转账，需要审核</em>
+                            </span>
+                            <span class="go_pay">去支付</span>
+                        </a>
+                        </div>
+					</div>
+					
+                    </li>
+					 <!--升级会员-->
+                    <li class="tabCot">
+                    <div id="bgbox">
+                        <form class="vipForm" action="#" method="post">
+						<p>我的会员状态：普通会员</p>   
+                        <p>选择会员类型：</p>                   
+                        <dl>
+      					 <dd><img src="../images/vip/vipico.png"/><input type="radio"  name="vipType"/>包月会员：￥30元</dd>
+                 		 <dd><img src="../images/vip/vipico.png"/><input type="radio"  name="vipType"/>包季会员：￥100元</dd>
+                 		 <dd><img src="../images/vip/vipico.png"/><input type="radio"  name="vipType"/>包年会员：￥200元</dd>
+                 		 <dd><img src="../images/vip/vipico.png"/><input type="radio"  name="vipType"/>永久会员：￥1000元</dd>
+                        </dl>
+                         <p style="text-align:center; margin-top:20px;"><input type="button" class="vpiBtn" value="立即升级"/></p>
+                        </form>
+                       
+					</div>
+                    </li>
+					<!--修改密码-->
+                    <li class="tabCot">
+                    <div id="bgbox">
+                        <div class="formBox" >
+                            <form  action="#" method="post" >
+                            <dl>
+                            <dt>原密码：</dt>
+                            <dd><input id="oldPwd" type="text" placeholder="请输入原密码" required/></dd>           
+                            </dl>
+                            <dl>
+                            <dt>新密码：</dt>
+                            <dd><input id="newPwd"  type="password" placeholder="请输入新密码" required/></dd>
+                            </dl>
+                            <dl>
+                            <dt>确认密码：</dt>
+                             <dd><input id="repwd" type="password" placeholder="请再次确认密码" required/></dd>
+                            </dl>
+                            <dl class="btn">
+                            <dt>&nbsp;</dt>
+                            <dd><input type="submit" value="确认修改"/></dd>
+                            </dl>
+                            </form>
+                        </div> 
+					</div>
+                    </li>
+					<!--已购资源-->
+                    <li class="tabCot">
+                    <div id="bgbox">
+						<iframe src="purchase.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+					</div>
+                    </li>
+					<!--佣金提现-->
+                    <li class="tabCot">
+                     <div id="bgbox">               	
+						 <div id="tikuan" class="formBox">
+                         <h3>提现须知：请先绑定银行卡，然后才可以申请提现。<a href="javascript:void(0)" onclick="bindBank()">点击绑定银行卡</a></h3>
+                            <form  action="#" method="post" >
+                            <dl>
+                            <dt>全部佣金：</dt>
+                            <dd>100元<a href="javascript:void(0)"; id="whatIsAvail" onmouseover="availDisc()">什么是佣金？</a></span></dd>           
+                            </dl>
+                            <dl>
+                            <dl>
+                            <dt>提现金额：</dt>
+                            <dd><input id="oldPwd" type="text" placeholder="请输入想提现的金额" required/></dd>           
+                            </dl>
+                            <dl class="btn">
+                            <dt>&nbsp;</dt>
+                            <dd><input style="background:#F93" type="submit" value="申请提现"/></dd>
+                            </dl>
+                            </form>
+                        </div> 
+                         <div class="bankBox" >
+                         <h3>绑定银行卡信息：<a href="javascript:void(0)" onclick="backAvail()">（点击返回）</a></h3>
+                            <form  action="#" method="post" >
+                            <dl>
+                            <dt>收款银行：</dt>
+                           	<dd><input id="bankName" type="text" placeholder="请输入银行名称" required/></dd>          
+                            </dl>
+                            <dl>
+                            <dt>开户姓名：</dt>
+                           	<dd><input id="UserName" type="text" placeholder="请输入持卡人姓名" required/></dd>          
+                            </dl>
+                            <dl>
+                            <dl>
+                            <dt>银行卡号：</dt>
+                            <dd><input id="cardNum" type="text" placeholder="请输入银行卡号" required/></dd>           
+                            </dl>
+                            <dl>
+                            <dt>支行地址：</dt>
+                            <dd><input id="bankAddress" type="text" placeholder="请输入开户行所在地址" required/></dd>           
+                            </dl>
+                            <dl class="btn">
+                            <dt>&nbsp;</dt>
+                            <dd><input type="submit" value="点击绑定"/></dd>
+                            </dl>
+                            </form>
+                        </div> 
+					</div>
+                    </li>
+					<!--浏览记录-->
+                    <li class="tabCot">
+					<div id="bgbox">
+                        <iframe src="record.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+					</div>
+                    </li>
+                </ul>
+                <div style="clear:both"></div>
+            </div>
+            <div class="modBottom">
+                <span class="modABL">&nbsp;</span><span class="modABR">&nbsp;</span>
+            </div>
+        </div>
+        <script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
+        <script type='text/javascript' src='js/tab.js'></script>
+        <script type="text/javascript" src="../layer/layer.js"></script>
+        <script language="javascript" type="text/javascript">
+            $(function() {
+				var tabId=GetQueryString("tid");//要打开第几个tab,默认0为第一个
+				if(tabId==null||tabId==""){
+					tabId=0;
+				}	
+						
+               changeTab(tabId);
+
+            });
+			//tab切换
+			function changeTab(id){
+				 $("#tab").webwidget_scroller_tab({
+                    scroller_time_interval: '5000',
+                    scroller_window_padding: '10',
+                    scroller_window_width: '800',
+                    scroller_window_height: '450',
+                    scroller_head_text_color: '#999',
+                    scroller_head_current_text_color: '#1C86EE',
+                    directory: 'images'
+                },id);
+			}
+			
+			//选取会员类型
+			$("input:[type=radio]").click(function () {
+                if ($(this).attr("checked")) {
+                   $(this).parent().css("color","red");
+				   $(this).parent().siblings().css("color","#0099FF");
+                }
+            });
+			
+			function availDisc(){
+				//tips层-左 [绿色的]
+				layer.tips('佣金来源：<br/>平台红利、出售源码所得利益，充值的金额不属于佣金，不可提现！', '#whatIsAvail', {
+				  tips: [2, '#78BA32']
+				});
+
+			};
+			function bindBank(){
+				//先检查用户有没有绑定，没绑定就执行以下代码
+				$("#tikuan").hide();
+				$(".bankBox").show();
+			}
+			function backAvail(){
+				$("#tikuan").show();
+				$(".bankBox").hide();
+			}		
+			//获取url?传送过来的值
+			function GetQueryString(name) { 
+			  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+			  var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+			  var context = ""; 
+			  if (r != null) 
+				 context = r[2]; 
+			  reg = null; 
+			  r = null; 
+			  return context == null || context == "" || context == "undefined" ? "" : context; 
+			}
+        </script>		
+</body>
+</html>

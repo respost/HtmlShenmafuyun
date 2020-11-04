@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+  <!-- Stylesheets -->
+  <link href="../thirdParty/bootstrap/css/bootstrap.css" rel="stylesheet"> 
+    <!-- Font awesome icon -->
+  <link href="../thirdParty/bootstrap/css/font-awesome.css" rel="stylesheet"> 
+<title>添加分组</title>
+</head>
+<body>
+<table class="table table-bordered table-hover m10">
+    <tr>
+        <td class="tableleft">分组名称：</td>
+        <td><input type="text" name="name" size="25"/></td>
+    </tr>
+	<tr>
+        <td class="tableleft">折扣比例：</td>
+        <td><input type="text" name="disc" size="25"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft"></td>
+        <td>
+            <button type="submit" class="btn btn-primary"  type="button">保 存</button><button type="button" style="margin-left:45px;" class="btn btn-success" name="backid" id="backid">返回列表</button>
+        </td>
+    </tr>
+</table>
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../thirdParty/layer/layer.js"></script>
+<script type="text/javascript" src="../js/common.js"></script><!-- 封装公用的jQuery方法 -->
+<script>
+    $(function () {       
+	    	//获取传送过来的groupId 
+    	var groupId=getQueryString("id");
+    	alert(groupId);
+    	if(groupId!=0){
+    	}
+	
+	
+		$('#backid').click(function(){
+		 parent.window.location.href="user_group.html";//刷新父窗口
+		 var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+		 parent.layer.close(index);//关闭弹出框
+		 });
+
+    });
+			//获取url?传送过来的值
+		function GetQueryString(name) { 
+		  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+		  var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+		  var context = ""; 
+		  if (r != null) 
+		     context = r[2]; 
+		  reg = null; 
+		  r = null; 
+		  return context == null || context == "" || context == "undefined" ? "" : context; 
+		}
+</script>
+</body>
+</html>

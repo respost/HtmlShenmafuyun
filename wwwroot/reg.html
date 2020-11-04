@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>会员注册 - 神码服云</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/top.css">
+<link rel="stylesheet" type="text/css" href="css/foot.css">
+<link rel="stylesheet" type="text/css" href="css/reg.css">
+<link rel="stylesheet" type="text/css" href="css/service.css">
+<link rel="stylesheet" id="skin" type="text/css" href="">
+<link rel="stylesheet" type="text/css" href="layer/theme/default/layer.css">
+</head>
+<body>
+<!--top-->
+<div id="top">
+	<div id="topbox">
+		<div class="top_left">
+			<ul>
+			<li onclick="SetHome(this,'http://www.smfy123.com');">设为首页</li>
+			<li onclick="AddFavorite('神码服云',location.href)">收藏本站</li>
+			</ul>
+		</div>
+		<div class="top_right">
+		<ul>
+        <li class="changeSkin" title="点击更换皮肤">换肤</li>
+         <li><a href="#">留言板</a></li>
+		<li><a href="#">我的收藏</a></li> 
+        </ul>          	 			
+		</div>
+    </div>
+</div>
+<div id="myskin">
+	<div id="skinbox">
+        <ul>
+            <li>
+                <img src="skin/images/ico1.jpg"/>
+                <p>清凉一夏</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico2.jpg"/>
+                <p>小黄人</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico3.jpg"/>
+                <p>王者荣耀</p>
+                <span></span>
+            </li>
+            <li style="margin-right:0px;">
+                <img src="skin/images/ico4.jpg"/>
+                <p>夏日海滩</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico5.jpg"/>
+                <p>春意盎然</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico6.jpg"/>
+                <p>赵丽颖</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico7.jpg"/>
+                <p>Angelababy</p>
+                <span></span>
+            </li>
+             <li style="margin-right:0px;">
+                <img src="skin/images/ico8.jpg"/>
+                <p>哆啦A梦</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico9.jpg"/>
+                <p>Hello Kitty</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico10.jpg"/>
+                <p>荷塘月色</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="skin/images/ico11.jpg"/>
+                <p>可爱阿狸</p>
+                <span></span>
+            </li>
+             <li style="margin-right:0px;">
+                <img src="skin/images/ico12.jpg"/>
+                <p>初音未来</p>
+                <span></span>
+            </li>
+        </ul>
+        <div>
+        	<dl>
+        	<dt><img id="previewPic" src="images/skinStyle.png"/></dt>
+            <dd>背景皮肤预览效果</dd>
+            <dd><input id="skin_save" type="button" value="保存"/><input id="skin_close" type="button" value="关闭"/></dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div id="allPage">
+<!--header-->
+<div id="header">
+	<div id="logo"><a href="index.html"><img src="images/logo.png"/></a></div>
+    <div id="search">
+    <div class="search_txet"> <input type="text" value=""  placeholder="搜索资源…"/></div>
+    <div class="search_btn">搜索</div>
+    </div>
+ 	<div id="tag">
+    	<dl class="beat">
+    		<dt><a href="reg.html"><img src="images/join.png"/> </a></dt>
+    		<dd>加入会员</dd>
+    	</dl>
+    	<dl class="beat">
+    		<dt><a href="#"><img src="images/email.png"/> </a></dt>
+    		<dd>联系我们</dd>
+   		</dl>
+    	<dl class="beat">
+    		<dt><a href="#"><img src="images/error.png"/> </a></dt>
+   			 <dd>失效通知</dd>
+    	</dl>
+   		<dl class="beat">
+   	 		<dt><a href="#"><img src="images/idc.png"/> </a></dt>
+    		<dd>神码数据</dd>
+    	</dl>
+    	<dl>
+            <dt class="headPic"><a href="#"><img id="headPic" src="images/member.jpg" /> </a></dt>
+     		<dd class="headFont"><span id="nick">我叫好帅</span><img id="drop-down" src="images/drop-down.gif"></dd>
+    	</dl>
+         <div id="userNav"> 
+					<a  href="javascript:void(0)" onClick="openUserBox(0)"><span class="lnIco Ico_user"></span>会员中心</a>
+					<a  href="javascript:void(0)" onClick="openUserBox(1)"><span class="lnIco Ico_recharge"></span>账户充值</a>
+					<a  href=""><span class="lnIco Ico_msg"></span>消息(<span id="newMsg">0</span>)</a>
+                    <a  href="javascript:void(0)" onClick="loginOut()"><span class="lnIco Ico_exit"></span>退出</a>
+			</div>
+    </div>
+    <div id="nav">
+        <ul>
+        <li class="current"><a href="index.html">网站首页</a></li>
+        <li><a href="#">精品源码</a></li>
+        <li><a href="#">会员专享</a></li>
+        <li><a href="#">站长工具</a></li>
+        <li><a href="#">软件下载</a></li>
+        <li><a href="#">技术文档</a></li>
+        <li><a href="#">行业资讯</a></li>
+        <li><a href="#">聊天频道</a></li>
+        <li style=" margin-right:0px;"><a href="#">手机客户端</a></li>
+        </ul>
+    </div>
+</div>
+<!--注册页-->
+<div id="regflash"></div>
+<!--regStep Start -->
+<div id="regStep">
+   <ul>
+      <li class="active">
+      		<i class="icon"></i>
+      		<em>1</em><span>填写基本信息</span>	
+      </li>
+      <li>
+      		<i class="icon"></i>
+       		<em>2</em><span>邮箱验证</span>
+       </li>
+       <li>
+			<em>3</em><span>注册成功</span>            
+       </li>
+    </ul>
+</div>
+<!--regStep End -->
+<div id="regbox">
+		<h1><span class="regicon"></span>注册会员<span class="login">已有账号？<a id="gotoLogin">立即登录</a></span></h1>
+		<form  method="post" action="#">
+			<dl>
+				<dt>用户名：</dt>
+    			<dd><input id="name" type="text" placeholder="请输入5-20位的用户名" required/><p id="name_promt"></p></dd>           
+			</dl>
+			<dl>
+				<dt>Email：</dt>
+    		<dd><input id="email" type="text" placeholder="登录邮箱，同时用于接收重要文件" required/><ul class="list"></ul><p id="email_promt"></p></dd>
+			</dl>
+			<dl>
+				<dt>密码：</dt>
+    			<dd><input id="pwd" class="maxPwd" type="password" placeholder="6-20位字符，可由英文、数字及标点符号组成" required/><p id="pwd_promt"></p></dd>
+			</dl>
+			<dl>
+				<dt>确认密码：</dt>
+   				 <dd><input id="repwd" type="password" placeholder="请再次输入登录密码" required/><p id="repwd_promt"></p></dd>
+			</dl>
+            <dl>
+				<dt>手机号码：</dt>
+    			<dd><input id="phone" type="text" placeholder="11位手机号码" required/><p id="phone_promt"></p></dd>
+			</dl>
+             <dl>
+				<dt>联系Q Q：</dt>
+    			<dd><input id="qq" type="text" placeholder="方便我们与您联系" required/><p id="qq_promt"></p></dd>
+			</dl>
+             <dl class="agree">
+				<dt>&nbsp;</dt>
+    			<dd><input id="agree" type="checkbox" />我仔细阅读并同意网站<a href="#">《服务条款》</a>与<a href="#">《免责声明》</a><p id="agree_promt"></p></dd>
+			</dl>
+            <dl class="btn">
+				<dt>&nbsp;</dt>
+    			<dd><input id="regBtn" type="submit" value="立即注册"/></dd>
+			</dl>
+		</form> 
+</div>
+<!--footer-->
+<div style="clear:both"></div>
+<div id="footer">
+	<div id="link">
+    	<h1>友情链接</h1>
+        <ul>
+        <li><a href="#"><img src="images/baidu.gif"/></a></li>
+        <li><a href="#"><img src="images/360so.gif"/></a></li>
+        <li><a href="#"><img src="images/sogou.gif"/></a></li>
+         <li><a href="#"><img src="images/weixin.jpg"/></a></li>
+        <li><a href="#"><img src="images/alipay.gif"/></a></li>
+        <li><a href="#"><img src="images/admin5.gif"/></a></li>
+        <li><a href="#"><img src="images/tenpay.gif"/></a></li>
+        <li><a href="#"><img src="images/upyun.jpg"/></a></li>
+        <li><a href="#"><img src="images/zzidc.jpg"/></a></li>
+        <li  style="padding-right:0px;"><a href="#"><img src="images/aliyun.jpg"/></a></li>
+        </ul>
+    </div><!--link结束-->
+	<div id="footup"></div>
+	
+    <div id="footdown">
+   		 <div id="footbox">
+    		<div class="footdown_left">
+    			<div>
+                <ul>
+    			<li><a href=""#>关于我们</a></li>
+    			<li><a href=""#>联系我们</a></li>
+    			<li><a href=""#>广告合作</a></li>
+    			<li><a href=""#>隐私条款</a></li>
+    			<li><a href=""#>免责声明</a></li>
+    			<li><a href=""#>网站地图 </a></li>
+    			<li style="padding-right:0px"><a href=""#>&copy; 2008-2017 神码服云 版权所有</a></li> 
+    			</ul>
+                </div>
+                <p>工信备：桂ICP备17012557号-1 公安备：桂公网安备 42280102000242号</p>
+    		</div>
+    		<div class="footdown_right">
+                <div>
+                <ul>
+    			<li><a href=""#><img src="images/rz1.png"/></a></li>
+    			<li><a href=""#><img src="images/rz2.png"/></a></li>
+                <li><a href=""#><img src="images/rz3.png"/></a></li>
+                <li><a href=""#><img src="images/rz4.png"/></a></li>
+                <li><a href=""#><img src="images/rz5.png"/></a></li>
+    			</ul>
+                </div>
+            </div>
+         </div>
+         <div class="footlogo"><a href="#"><img src="images/footlogo.png"/></a></div>
+    </div>
+	<div id="fixed_left"></div>
+    <div id="backtop" class="backtopClass">
+		<a title="返回顶部"><img src="images/scrolltop_2.png" ></a>
+	</div>
+	<!-- 客服代码 begin -->
+    <audio id="bgMusic" src="images/service/music.mp3" autoplay="autoplay" loop></audio>
+    <div id="service">
+        <div id="open_im" class="open-im">&nbsp;</div>  
+        <div class="im_main" id="im_main">
+            <div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>
+            <a href="tencent://message/?uin=3196887191&amp;Menu=yes" target="_blank" class="im-qq qq-a" title="在线QQ客服">
+                <div class="qq-container"></div>
+                <div class="qq-hover-c"><img class="img-qq" src="images/service/qq.png"></div>
+                <span> QQ在线咨询</span>
+            </a>
+            <div class="im-tel">
+                <p>售前咨询热线</p>
+                <p class="tel-num">400-123-45678</p>
+                <p>售后咨询热线</p>
+                <p class="tel-num">010-12345678</p>
+            </div>
+            <div class="im-footer" style="position:relative">
+                <div class="weixing-container">
+                    <div class="weixing-show">
+                        <div class="weixing-txt">
+                        <p>微信扫一扫</P>
+                        <p>关注神码服云</p>
+                        </div>
+                        <img class="weixing-ma" src="images/service/weixing.jpg">
+                        <div class="weixing-sanjiao"></div>
+                        <div class="weixing-sanjiao-big"></div>
+                    </div>
+                </div>
+                <!--<div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>-->
+                <div class="go-top"><a id="audioBtn" title="开关音效"></a></div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+    </div>
+	<!-- 客服代码 end-->
+</div>
+</div>
+<!--JavaScript jQuery start-->
+<script type="text/javascript" src="jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/top.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/foot.js"></script>
+<script type="text/javascript" src="js/reg.js"></script>
+<script type="text/javascript" src="js/email.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+<script type="text/javascript">
+//点击登录
+$("#gotoLogin").click(function(){
+	//iframe层-禁滚动条
+	layer.open({
+	  type: 2,
+	  title:'会员登录',
+	  area: ['533px', '400px'],
+	  skin: 'layui-layer-rim', //加上边框
+	  content: ['login.html?page=reg', 'no']
+	}); 
+});
+
+</script>
+<!--JavaScript jQuery end-->
+</body>
+</body>
+</html>
